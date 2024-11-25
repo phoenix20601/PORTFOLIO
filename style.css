@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Apply the full-page background image */
+body {
+    background: url('F-1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+}
+/* Ensure the header is not overlapping other sections */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10; /* Ensures header stays on top */
+    background-color: rgba(0, 0, 0, 0.7); /* Slight transparent background for visibility */
+    backdrop-filter: blur(5px); /* Optional: gives a frosted effect to the header */
+}
+
+/* Enhanced Home Section */
+/* Home Section Styling */
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ensures full height even on small devices */
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('F-1.jpg') no-repeat center center / cover; /* Flexible background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #7d2ae8; 
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Content Styling */
+.content {
+    max-width: 800px;
+    text-align: center;
+    padding: 0 20px;
+    animation: fadeIn 1s ease-in-out; /* Smooth fade-in effect */
+}
+
+.content h2 {
+    font-size: clamp(2.5em, 5vw, 4em); /* Responsive font scaling */
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.content h2 span {
+    background: linear-gradient(135deg, #ffffff, #ffffff); /* Example gradient with two distinct colors */
+    -webkit-background-clip: text; /* Clips the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Fills the text with transparency so the background gradient shows */
+}
+
+
+.content h4 {
+    font-size: clamp(1.5em, 3vw, 2.2em); /* Responsive font scaling */
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #e0e0e0;
+}
+
+.content p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    font-weight: 300;
+    color: #d3d3d3;
+}
+/* about */
+
+#about {
+    position: relative;
+    width: 100%;
+    padding: 50px 100px;
+    background: url('F-1.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 150vh;
+    background: rgba(0, 0, 0, 0.6); /* Slight dark overlay for readability */
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3)
+}
+
+
+#about .profile-picture {
+    width: 150px; /* Adjust the size of the profile picture */
+    height: 150px;
+    margin-bottom: 20px; /* Space between the image and text */
+    border-radius: 50%; /* Makes the image round */
+    overflow: hidden; /* Ensures the image fits inside the circle */
+    border: 5px solid #fff; /* Optional: adds a white border around the image */
+    
+    
+}
+
+#about .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the whole circle */
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: 980;
+    margin-bottom: 15px;
+}
+
+#about p {
+    background: rgba(19, 18, 18, 0.806);
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    
+}
+
+#about .skills {
+    margin-top: 40px;
+    text-align: left;
+    width: 80%;
+}
+
+#about .skills h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#about .skill {
+    margin-bottom: 15px;
+}
+
+#about .skill span {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#about .skill-bar {
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Optional: You can add more colors for different skill levels */
+
+
+
+/* Button Group Styling */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #fff, hsl(300, 14%, 99%));
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, rgb(252, 252, 253), #7d2ae8);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .home {
+        padding: 20px;
+    }
+
+    .content h2 {
+        font-size: 2.5em;
+    }
+
+    .content h4 {
+        font-size: 1.8em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Styling for "Let's Talk" Button */
+/* Let's Talk button style */
+.btn-talk {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #7d2ae8, #9f4af7); /* Gradient matching the page */
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.btn-talk:hover {
+    background: linear-gradient(135deg, #9f4af7, #7d2ae8); /* Reversed gradient for hover */
+    transform: translateY(-3px); /* Hover lift effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+/* blog */
+/* Blog Section */
+.blog {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Adjust height as needed */
+    background: url('F-1.jpg') no-repeat center center/cover; /* Use uploaded image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding:10px;
+}
+
+.blog-content {
+    background: rgba(0, 0, 0, 0.6); /* Slight dark overlay for readability */
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.blog-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.blog-content p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.btn-blog {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 30px;
+    background: linear-gradient(135deg, #7d2ae8, #9f4af7);
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-blog:hover {
+    background: linear-gradient(135deg, #9f4af7, #7d2ae8);
+    transform: translateY(-3px);
+    
+}
+
+/* portfolio */
+/* Portfolio Section */
+
+/* Portfolio Section */
+#portfolio {
+    border: #fff;
+    position: relative;
+    width: 100%;
+    padding: 50px 100px;
+    background: url('F-1.jpg') no-repeat center center/cover; /* Replace 'portfolio-bg.jpg' with your image file */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-height: 110vh;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.portfolio p {
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.btn-portfolio {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #7d2ae8, #9f4af7);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-portfolio:hover {
+    background: linear-gradient(135deg, #9f4af7, #7d2ae8);
+}
+
+/* Social Icons */
+/* Center-aligned Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Align horizontally */
+    gap: 20px; /* Space between icons */
+    margin-top: 20px; /* Add space above or below as needed */
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #7d2ae8;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.social-icons a:hover {
+    background: #9f4af7;
+}
+
+
+#contact {
+    width: 100%;
+    padding: 50px 100px; /* Reduced padding for a compact layout */
+    background:url('F-2.jpg');
+    background-size: cover; /* Ensure background image covers the section */
+    background-position: center;
+    text-align: center;
+}
+ 
+#contact h2 {
+    font-size: 2rem; /* Reduced heading size */
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1rem; /* Reduced text size */
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced spacing between form fields */
+    max-width: 500px; /* Limit form width for compactness */
+    margin: 0 auto 40px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 15px; /* Reduced padding for smaller input fields */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 100px; /* Reduced height for a smaller textarea */
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #7d2ae8, #9f4af7);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(135deg, #9f4af7, #7d2ae8);
+}
+
+/* Additional Contact Information */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.info-item {
+    text-align: center;
+    flex: 1 1 calc(33.33% - 30px); /* Each item takes up one-third of the row */
+    min-width: 200px;
+    max-width: 300px;
+    background: #9f4af7; /* Add a light background for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-item h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    #contact {
+        padding: 30px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-item {
+        max-width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth scrolling for navigation */
+html {
+    scroll-behavior: smooth;
+}
